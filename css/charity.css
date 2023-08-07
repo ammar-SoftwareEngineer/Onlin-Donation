@@ -1,0 +1,473 @@
+/* start global */
+:root {
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --primary-color: #FF7200;
+    --secondary-color: #011749;
+    --third-color: #F7F2ED;
+    --fourth-color: #666666;
+    --main-padding: 100px;
+}
+
+
+/* ms */
+@media(min-width:576px) {}
+
+/* md */
+@media(min-width:768px) {}
+
+/* lg */
+@media(min-width:992px) {}
+
+/* xl */
+@media(min-width:1200px) {}
+
+/* xxl */
+@media(min-width:1400px) {}
+
+* {
+    font-family: 'Poppins', sans-serif !important;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--secondary-color);
+}
+
+
+
+@media(max-width:768px) {
+    .main-text p {
+        width: 100%;
+    }
+}
+
+/* end global */
+/* ############################################################### */
+/* start background */
+.bg {
+    background: url("../images/charity.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 40%;
+}
+
+.bg::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+
+}
+
+
+/* end background */
+/* ####################################################### */
+/* start navbar */
+.donation-navbar .navbar-toggler {
+    border-color: transparent;
+}
+
+.donation-navbar .navbar-toggler:active,
+.donation-navbar .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.donation-navbar .lists {
+    background-color: rgb(7, 10, 50);
+    position: relative;
+    z-index: 1;
+}
+
+.donation-navbar .lists li a {
+    font-size: 18px;
+}
+
+.donation-navbar .navbar-brand img {
+    width: 100px;
+    z-index: 1;
+}
+
+.donation-navbar .lists li {
+    padding: 5px;
+    z-index: 1;
+    position: relative;
+}
+
+.donation-navbar .lists li::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    transform: translateY(-100%);
+    left: 0%;
+    width: 0%;
+    background-color: var(--primary-color);
+    border: 1.5px solid var(--primary-color);
+    z-index: 3;
+    transition: 0.3s all ease-in-out;
+    opacity: 0;
+}
+
+.donation-navbar li:hover::before {
+    width: 100%;
+    opacity: 1;
+}
+
+
+.donation-navbar li a {
+    color: var(--white-color) !important;
+    font-size: 18px;
+}
+
+@media(min-width:992px) {
+    .donation-navbar .lists {
+        background-color: transparent;
+    }
+
+    .donation-navbar li a {
+        color: var(--white-color) !important;
+        font-size: 15px;
+    }
+
+    .donation-navbar li {
+        padding: 0px;
+        margin-left: 15px;
+        z-index: 1;
+        position: relative;
+    }
+}
+
+.donation-navbar li a:hover {
+    color: var(--primary-color) !important;
+    transition: 0.3s all ease-in-out;
+}
+
+.donation-navbar .account li button {
+    background-color: transparent !important;
+    border-color: var(--white-color);
+}
+
+.donation-navbar .account li button:hover {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color);
+}
+
+.donation-navbar .account li button:hover a {
+    color: var(--white-color) !important;
+}
+
+/* end navbar */
+/* ####################################################################### */
+/* start landing */
+.landing .intro-text {
+    position: relative;
+}
+
+.landing .intro-text h3 {
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--white-color);
+    margin-top: 80px;
+    z-index: 1;
+}
+
+/* end landing */
+
+/* ################################################################# */
+/* start popular */
+
+.popular_charity_area .main-text h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    position: relative;
+}
+
+.popular_charity_area .main-text h2::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 60px;
+    top: 50%;
+    left: 90px;
+    transform: translateY(-50%);
+}
+
+.popular_charity_area .main-text span {
+    color: var(--primary-color);
+}
+
+.popular_charity_area .main-text h3 {
+    font-size: 40px;
+    color: var(--secondary-color);
+    font-weight: 700;
+    width: 33rem;
+    margin-bottom: 20px;
+}
+
+.popular_charity_area {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+
+
+.popular_charity_area .single-charity {
+    margin-bottom: 30px;
+}
+
+
+.popular_charity_area .single-charity .thumb {
+    -webkit-border-radius: 7px 7px 0 0;
+    -moz-border-radius: 7px 7px 0 0;
+    border-radius: 7px 7px 0 0;
+    overflow: hidden;
+}
+
+.popular_charity_area .single-charity .thumb img {
+    width: 100%;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+
+.popular_charity_area .single-charity .charity_content {
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    padding: 30px 30px 34px 30px;
+    position: relative;
+    -webkit-border-radius: 0 0px 7px 7px;
+    -moz-border-radius: 0 0px 7px 7px;
+    border-radius: 0 0px 7px 7px;
+}
+
+.popular_charity_area .single-charity .charity_content .custom_progress_bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+
+.popular_charity_area .single-charity .charity_content .custom_progress_bar .progress {
+    height: 4px;
+    overflow: visible;
+    font-size: 12px;
+    background-color: rgba(255, 114, 0, 0.2);
+    border-radius: 0;
+}
+
+
+.popular_charity_area .single-charity .charity_content .custom_progress_bar .progress .progress-bar {
+    background-color: var(--primary-color);
+    position: relative;
+}
+
+
+.popular_charity_area .single-charity .charity_content .custom_progress_bar .progress .progres_count {
+    position: absolute;
+    left: 120px;
+    top: 0;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 12px;
+    background: var(--primary-color);
+    line-height: 32px;
+    z-index: 1;
+    text-align: center;
+    color: var(--white-color);
+}
+
+
+
+.popular_charity_area .single-charity .charity_content .balance {
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+
+.popular_charity_area .single-charity .charity_content .balance span {
+    font-size: 14px;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.popular_charity_area .single-charity .charity_content h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+
+.popular_charity_area .single-charity .charity_content p {
+    margin-bottom: 15px;
+    color: #7A7B7C;
+    width: 300px;
+}
+
+.popular_charity_area .single-charity:hover .thumb img {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.popular_charity_area .single-charity .charity_content .read-more {
+    position: relative;
+    color: var(--secondary-color);
+    margin-left: 70px;
+    font-size: 16px;
+}
+
+.popular_charity_area .single-charity .charity_content .read-more:hover {
+    color: var(--primary-color);
+}
+
+.popular_charity_area .single-charity .charity_content .read-more::before {
+    content: "";
+    position: absolute;
+    border: 1px solid var(--fourth-color);
+    width: 36px;
+    top: 12px;
+    left: -65px;
+}
+
+/* end popular */
+/* ########################################################## */
+/* start footer */
+/* end footer */
+
+
+
+
+/* ############################################################## */
+/* start footer */
+footer {
+    background-color: var(--secondary-color) !important;
+    color: var(--white-color) !important;
+}
+
+.footer_logo img {
+    width: 100px;
+}
+
+footer .footer_top {
+    padding-top: 130px;
+    padding-bottom: 110px;
+}
+
+footer h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+footer li a {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+footer .four .form {
+    display: flex;
+    width: 400px;
+}
+
+footer .four .form input {
+    width: 300px;
+    height: 40px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+}
+
+footer .four .form input::placeholder {
+    padding-left: 20px;
+}
+
+footer .four .form button {
+    width: 100px;
+    background-color: var(--primary-color);
+    border: none;
+    height: 40px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+footer li a:hover {
+    color: var(--primary-color);
+}
+
+footer .socail_links ul li {
+    position: relative;
+    z-index: 1;
+}
+
+footer .socail_links ul li::before {
+    content: "";
+    position: absolute;
+    background-color: var(--white-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+}
+
+footer .socail_links ul li a {
+color: var(--secondary-color);
+}
+footer .socail_links ul li a:hover {
+    color: var(--primary-color);
+}
+.copy-right_text span{
+    color: var(--primary-color);
+}
+/* end footer */
