@@ -496,7 +496,7 @@ body {
 
 .charity .images .image:nth-child(2) .text ul {
     margin-top: 45px;
-    margin-left: 35px;
+    margin-left: 0px;
 }
 
 .charity .images .image:nth-child(2) .text ul li {
